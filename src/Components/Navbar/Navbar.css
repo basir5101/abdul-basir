@@ -1,0 +1,36 @@
+.nav-container{
+    background-image: linear-gradient(45deg, green, blue, white);
+}
+
+.selected{
+    border-bottom: 1px solid gold;
+    transition: 0.2s;
+    color: red;
+}
+.nav-container ul li{   
+    margin: 0 10px;
+    transition: 0.5s;
+    display: inline-block;
+}
+.nav-container ul li::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+      
+}
+.nav-container ul li.active::after{
+    width: 100%;
+    background: #ffdd40;      
+    color: #ffdd40;
+}
+
+.nav-container ul li:hover::after{
+    width: 100%;
+    background: #ffdd40;
+}
+.nav-container ul li .nav-link{
+    color: white;
+}
